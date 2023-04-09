@@ -1,0 +1,151 @@
+body {
+  font-family: "vazir", sans-serif;
+  font-family: "PT Serif", serif;
+}
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "vazir";
+  list-style: none;
+}
+:root {
+  --primarycolor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3 linear;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+  --btnColor: #dfcde8;
+}
+body {
+  font-family: "vazir";
+  background-color: var(--bodyColor);
+  color: var(--mainBlack);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.form-container {
+  display: flex;
+  align-items: center;
+}
+.todo-container {
+  width: 25rem;
+}
+form {
+  width: 25rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--mainWhite);
+  font-size: 1rem;
+}
+.fa-sharp {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 7px solid var(--secondaryColor);
+  background-color: var(--secondaryColor);
+  color: var(--primarycolor);
+  transition: all 0.3s ease-in-out;
+}
+.todo-button {
+  background-color: var(--secondaryColor);
+}
+form input {
+  flex: 1;
+}
+.filter-todos {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: var(--mainWhite);
+  cursor: pointer;
+}
+input:invalid {
+  background-color: ivory;
+  border: none;
+  outline: 2px solid red;
+  border-radius: 5px;
+}
+form input,
+form button {
+  border: none;
+  outline: none;
+  background-color: var(--mainWhite);
+  font-size: 1rem;
+  padding: 0.5rem;
+}
+form button {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.fa-sharp:hover {
+  font-size: 1rem;
+  padding: 0.5rem;
+  border: 7px solid var(--primarycolor);
+  border-radius: 8px;
+  background-color: var(--primarycolor);
+  color: var(--mainWhite);
+  transition: all 0.3s ease-in-out;
+}
+.todo {
+  margin-top: 0.5rem;
+  display: flex;
+  background-color: var(--secondaryColor);
+  color: var(--primarycolor);
+  justify-content: space-between;
+  align-items: center;
+}
+.todo li {
+  flex: 1;
+  font-weight: bold;
+  color: var(--primarycolor);
+}
+.todo span {
+  padding: 0.5rem;
+  display: block;
+  cursor: pointer;
+}
+.compleleted {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+select {
+  appearance: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 1rem;
+  color: var(--primarycolor);
+}
+.select {
+  width: 10rem;
+  font-weight: bold;
+  position: relative;
+  margin-left: 1rem;
+}
+.select::after {
+  content: "\25BC";
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  color: var(--primarycolor);
+}
